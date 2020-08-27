@@ -1,12 +1,16 @@
-import Value from "./Models/Value.js";
+import Blog from "./Models/Blog.js";
+
 
 let _state = {
-  activeValue: new Value({ title: "Value" }),
-  /** @type {Value[]} */
-  values: []
+  activeValue: new Blog(),
+  /** @type {Blog[]} */
+  Blogs: []
 };
 
 class Store {
+  constructor(){
+    console.log("store check");
+  }
   /**
    * Provides access to application state data
    */
