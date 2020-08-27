@@ -36,7 +36,14 @@ export default class BlogsController{
   _drawForm()
   }
 
-  
+  addComment(event, blogid){
+    event.preventDefault()
+    let form = event.target
+    let newComment = form.comment.value
+
+    blogsSERVICE.addComment(newComment, blogid)
+    _drawBlog()
+  }
   postBlog(event){
 event.preventDefault();
 let form = event.target
