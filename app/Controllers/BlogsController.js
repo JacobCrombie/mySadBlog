@@ -45,6 +45,11 @@ export default class BlogsController{
     _drawBlog()
   }
 
+  removeComment(commentId, commentName){
+    blogsSERVICE.removeComment(commentId, commentName)
+    _drawBlog()
+  }
+
   removeBlog(id){
     blogsSERVICE.removeBlog(id)
     _drawBlog()

@@ -37,7 +37,7 @@ export default class Blog {
       <div class="card">
         <div class="card-body">
           <p class="card-text">${c}</p>
-          <a href="#" class="btn btn-danger">Delete</a>
+          <i class="fa fa-trash align-self-end" onclick="app.blogsController.removeComment('${this.id}', '${c}')"></i>
         </div>
       </div>
     </div>`
