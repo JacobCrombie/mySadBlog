@@ -13,7 +13,7 @@ export default class Blog {
   get Template() {
     return `
     <div class="card my-3">
-    <h5 class="card-header">${this.title}</h5>
+    <h5 class="card-header">${this.title}<i class="fa fa-trash align-self-end" onclick="app.blogsController.removeBlog('${this.id}')"></i></h5>
     <div class="card-body">
       <h5 class="card-title">${this.timestamp}</h5>
       <p class="card-text">${this.content}</p>

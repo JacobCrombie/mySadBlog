@@ -44,6 +44,12 @@ export default class BlogsController{
     blogsSERVICE.addComment(newComment, blogid)
     _drawBlog()
   }
+
+  removeBlog(id){
+    blogsSERVICE.removeBlog(id)
+    _drawBlog()
+  }
+
   postBlog(event){
 event.preventDefault();
 let form = event.target
