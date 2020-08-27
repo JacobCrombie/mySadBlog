@@ -9,7 +9,7 @@ document.getElementById("blogzzz").innerHTML = template
 
 function _drawForm(){
   let template = `
-  <div class="card">
+  <div class="card my-3">
   <h5 class="card-header">new blog</h5>
   <div class="card-body">
       <form class="form-group" onsubmit="app.blogsController.postBlog(event)">
@@ -36,6 +36,7 @@ export default class BlogsController{
   _drawForm()
   }
 
+  
   postBlog(event){
 event.preventDefault();
 let form = event.target

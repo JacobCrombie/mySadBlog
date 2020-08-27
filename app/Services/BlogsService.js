@@ -6,11 +6,13 @@ class BlogsService{
     let newBlog = new Blog(newPost)
     STORE.State.Blogs.push(newBlog)
   }
+  
+  
+  
+  
   constructor(){
     console.log("service check");
   }
-
-
 }
 
 const SERVICE = new BlogsService();
