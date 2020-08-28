@@ -12,19 +12,22 @@ export default class Blog {
 
   get Template() {
     return `
-    <div class="card my-3">
-    <h5 class="card-header">${this.title}<i class="fa fa-trash align-self-end" onclick="app.blogsController.removeBlog('${this.id}')"></i></h5>
+  <div class="card my-3 p-2">
+    <div class="card-header d-flex flex-column">
+    <i class="fa fa-trash align-self-end" onclick="app.blogsController.removeBlog('${this.id}')"></i>
+    <h5 class="pabsolute">${this.title}</h5>
+    </div>
+
     <div class="card-body">
       <h5 class="card-title">${this.timestamp}</h5>
       <p class="card-text">${this.content}</p>
     </div>
     <form class="form-inline d-flex flex-direction-row" onsubmit="app.blogsController.addComment(event, '${this.id}')">
     <div class="form-group">
-        <label for=""></label>
         <input type="text" name="comment" id="comment" class="form-control" placeholder="comment" aria-describedby="helpId">
-        <button type= "submit">Add Comment</button>
+        <button class="btn-success" type= "submit">Add Comment</button>
     </div>
-</form>
+    </form>
     <div class="d-flex flex-direction-row col-12 flex-wrap">${this.commentTemplate}</div>
   </div>
     `

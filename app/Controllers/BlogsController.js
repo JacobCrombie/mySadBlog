@@ -20,7 +20,7 @@ function _drawForm(){
               <label for="content">Content</label>
               <textarea class="form-control" id="content" name="name" rows="3"></textarea>
           </div>
-          <button class="btn btn-warning" type="submit">Post Blog</button>
+          <button class="btn btn-warning mt-2 text-center justify-self-center" type="submit">Post Blog</button>
       </form>
   </div>
 </div>
